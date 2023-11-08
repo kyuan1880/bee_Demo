@@ -1,15 +1,16 @@
 package controllers
 
 import (
-	beego "github.com/beego/beego/v2/server/web"
+	"github.com/astaxie/beego"
 )
 
 type MainController struct {
 	beego.Controller
 }
 
+/**
+ * 默认页面
+ */
 func (c *MainController) Get() {
-	c.Data["Website"] = "beego.vip"
-	c.Data["Email"] = "astaxie@gmail.com"
-	c.TplName = "index.tpl"
+	c.TplName = "index.html"
 }
